@@ -1,0 +1,74 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  type?: 'website' | 'article' | 'profile';
+  schema?: Record<string, any>;
+}
+
+const {
+  title = 'Tattoo GOAT | The Definitive Directory of Master Artists & Gear Reviews',
+  description = 'Discover the greatest tattoo artists in the world and independently tested aftercare, precision rotary machines, and inks.',
+  image = 'https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?q=80&w=1200&auto=format&fit=crop',
+  type = 'website',
+  schema,
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://tattoogoat.com');
+const formattedTitle = title.includes('Tattoo GOAT') ? title : `${title} | Tattoo GOAT`;
+
+const defaultSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Tattoo GOAT',
+  url: 'https://tattoogoat.com',
+  description: 'The definitive index of world-class tattoo masters and gear reviews.',
+};
+---
+
+<!doctype html>
+<html lang="en" class="bg-zinc-950 text-zinc-100 antialiased selection:bg-amber-400 selection:text-black">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Primary Meta Tags -->
+    <title>{formattedTitle}</title>
+    <meta name="title" content={formattedTitle} />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#09090b" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={formattedTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:site_name" content="Tattoo GOAT" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={formattedTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
+    <!-- Structured Data JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify(schema || defaultSchema)} />
+  </head>
+  <body class="flex min-h-screen flex-col bg-[#09090b] text-zinc-100 font-sans">
+    <Navbar />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

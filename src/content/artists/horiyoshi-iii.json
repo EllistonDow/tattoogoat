@@ -1,0 +1,37 @@
+{
+  "name": "Horiyoshi III",
+  "handle": "@horiyoshi_3",
+  "headline": "Living Legend & Grandmaster of Traditional Japanese Irezumi",
+  "city": "Yokohama",
+  "country": "Japan",
+  "studio": "Horiyoshi Tattoo Museum & Studio",
+  "styles": ["Irezumi", "Japanese Traditional", "Tebori", "Full Bodysuit"],
+  "badge": "Living Legend",
+  "bio": "Yoshihito Nakano, universally revered as Horiyoshi III, is the undisputed patriarch of classical Japanese tattooing. Apprenticed under the legendary Horiyoshi I, he spent decades mastering full-body suits (Horimono) depicting mythical dragons, koi, and folklore warriors. His studio in Yokohama is considered a holy pilgrimage site for tattoo connoisseurs worldwide.",
+  "instagram": "https://instagram.com/horiyoshi_3",
+  "bookingUrl": "https://horiyoshi3.com",
+  "bookingStatus": "Books Closed",
+  "avatar": "https://images.unsplash.com/photo-1542385151-efd9000785a0?q=80&w=600&auto=format&fit=crop",
+  "coverImage": "https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?q=80&w=1400&auto=format&fit=crop",
+  "experienceYears": 45,
+  "awards": ["Order of the Rising Sun Cultural Contributor", "Tattoo Life Hall of Fame", "Yokohama Cultural Ambassador"],
+  "featured": true,
+  "rank": 1,
+  "signatureWork": [
+    {
+      "title": "Ryu Dragon Full Backpiece",
+      "image": "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?q=80&w=800&auto=format&fit=crop",
+      "tag": "Bodysuit"
+    },
+    {
+      "title": "Tebori Koi & Sakura Sleeve",
+      "image": "https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?q=80&w=800&auto=format&fit=crop",
+      "tag": "Sleeve"
+    },
+    {
+      "title": "Oni Demon Chest Plate",
+      "image": "https://images.unsplash.com/photo-1565058379802-dd10214815a5?q=80&w=800&auto=format&fit=crop",
+      "tag": "Chest"
+    }
+  ]
+}

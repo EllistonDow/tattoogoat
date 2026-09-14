@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import GuideCard from '../../components/GuideCard.astro';
+import { getCollection } from 'astro:content';
+import { BookOpen, ShieldCheck, Sparkles, Filter } from '@lucide/astro';
+
+const allGuides = await getCollection('guides');
+const sortedGuides = allGuides.sort(
+  (a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
+);
+
+const categories = [
+  { id: 'all', label: 'All Lab Reports' },
+  { id: 'aftercare', label: 'Aftercare & Healing' },
+  { id: 'machines', label: 'Wireless Machines' },
+  { id: 'inks', label: 'Inks & Pigments' },
+  { id: 'numbing', label: 'Numbing Creams' },
+];
+---
+
+<BaseLayout
+  title="The Tattoo Gear & Aftercare Lab | Expert Reviews & Buyer Guides"
+  description="Independent, lab-tested reviews of the best tattoo aftercare lotions, second-skin bandages, rotary wireless machines, and sterile pigments."
+>
+  <!-- Header -->
+  <div class="border-b border-zinc-800/80 bg-gradient-to-b from-zinc-950 via-zinc-900/50 to-zinc-950 py-12 sm:py-16">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-emerald-400">
+        <ShieldCheck class="h-4 w-4" />
+        <span>Independent Testing Lab</span>
+      </div>
+      <h1 class="mt-2 text-3xl font-black text-white sm:text-5xl">
+        Tattoo <span class="text-amber-400 font-serif italic">Gear & Aftercare</span> Reviews
+      </h1>
+      <p class="mt-3 max-w-2xl text-sm sm:text-base text-zinc-400">
+        Protect your skin and perfect your craft. We evaluate every product on real healing skin and in working studios with zero sponsor pay-to-win influence.
+      </p>
+
+      <!-- Category Filter Pills -->
+      <div class="mt-8 flex flex-wrap gap-2" id="category-filters">
+        {categories.map((c) => (
+          <button
+            type="button"
+            data-category={c.id}
+            class={`guide-cat-btn rounded-lg border px-3.5 py-1.5 text-xs font-semibold transition-all ${
+              c.id === 'all'
+                ? 'active border-amber-400 bg-amber-400/10 text-amber-300'
+                : 'border-zinc-800 bg-zinc-900/60 text-zinc-400 hover:border-zinc-700 hover:text-white'
+            }`}
+          >
+            {c.label}
+          </button>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- Guides Grid -->
+  <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+    <div id="guides-grid" class="grid grid-cols-1 gap-8 md:grid-cols-2">
+      {sortedGuides.map((guide) => (
+        <div class="guide-item" data-category={guide.data.category}>
+          <GuideCard guide={guide} />
+        </div>
+      ))}
+    </div>
+
+    <!-- Editorial Integrity Callout -->
+    <div class="mt-16 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6 sm:p-8">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-400/10 border border-amber-400/30 shrink-0">
+          <ShieldCheck class="h-6 w-6 text-amber-400" />
+        </div>
+        <div>
+          <h3 class="text-base font-bold text-white">Our 100% Uncompromised Testing Standard</h3>
+          <p class="mt-1 text-xs text-zinc-400 leading-relaxed">
+            Brands cannot buy higher placement in our top picks. Our editorial team purchases products at standard retail rates and tests them in active tattoo conventions, private studios, and healing skin trials.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  const catBtns = document.querySelectorAll('.guide-cat-btn');
+  const guideItems = document.querySelectorAll('.guide-item') as NodeListOf<HTMLElement>;
+
+  catBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      catBtns.forEach((b) => {
+        b.classList.remove('active', 'border-amber-400', 'bg-amber-400/10', 'text-amber-300');
+        b.classList.add('border-zinc-800', 'bg-zinc-900/60', 'text-zinc-400');
+      });
+      btn.classList.add('active', 'border-amber-400', 'bg-amber-400/10', 'text-amber-300');
+      btn.classList.remove('border-zinc-800', 'bg-zinc-900/60', 'text-zinc-400');
+
+      const cat = btn.getAttribute('data-category');
+      guideItems.forEach((item) => {
+        if (cat === 'all' || item.dataset.category === cat) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>

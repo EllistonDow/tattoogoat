@@ -1,0 +1,27 @@
+{
+  "name": "Bang Bang",
+  "handle": "@bangbangnyc",
+  "headline": "Visionary Founder of Bang Bang NYC & Photorealistic Master",
+  "city": "New York",
+  "country": "United States",
+  "studio": "Bang Bang Tattoo NYC (SoHo)",
+  "styles": ["Photorealism", "Micro-Detail", "Black & Grey", "Fine Line"],
+  "badge": "Pioneer",
+  "bio": "Keith 'Bang Bang' McCurdy transformed the tattoo industry from gritty underground shops into high-fashion art institutions. His SoHo flagship studio hosts the world's most elite roster of realist artists. Known for mind-bending photographic fidelity and invisible needlework, Bang Bang has tattooed global icons from Rihanna to LeBron James.",
+  "instagram": "https://instagram.com/bangbangnyc",
+  "bookingUrl": "https://bangbangforever.com",
+  "bookingStatus": "By Referral",
+  "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop",
+  "coverImage": "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1400&auto=format&fit=crop",
+  "experienceYears": 20,
+  "awards": ["Author of My Life in Ink", "Architectural Digest Studio of the Decade"],
+  "featured": true,
+  "rank": 3,
+  "signatureWork": [
+    {
+      "title": "Hyper-Realistic Renaissance Statue Portrait",
+      "image": "https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?q=80&w=800&auto=format&fit=crop",
+      "tag": "Backpiece"
+    }
+  ]
+}

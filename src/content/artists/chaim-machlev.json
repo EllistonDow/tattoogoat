@@ -1,0 +1,27 @@
+{
+  "name": "Chaim Machlev",
+  "handle": "@dotstolines",
+  "headline": "Avant-Garde Architectural Linework & Sacred Geometry Virtuoso",
+  "city": "Berlin",
+  "country": "Germany",
+  "studio": "DotsToLines Private Studio",
+  "styles": ["Geometric", "Dotwork", "Linework", "Blackwork", "Ornamental"],
+  "badge": "Visionary",
+  "bio": "Berlin-based Chaim Machlev views the human anatomy as a rhythmic kinetic canvas. His signature 'Dots to Lines' compositions flow organically across muscle contours and joints, creating hypnotic optical illusions, wave equations, and cybernetic organicism that redefine what tattooing can achieve.",
+  "instagram": "https://instagram.com/dotstolines",
+  "bookingUrl": "https://dotstolines.com",
+  "bookingStatus": "Waitlist",
+  "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop",
+  "coverImage": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1400&auto=format&fit=crop",
+  "experienceYears": 13,
+  "awards": ["Berlin Avant-Garde Arts Prize", "Venice Biennale Contributor"],
+  "featured": false,
+  "rank": 5,
+  "signatureWork": [
+    {
+      "title": "Kinetic Sine Wave Spine Piece",
+      "image": "https://images.unsplash.com/photo-1590246814883-578337851d7e?q=80&w=800&auto=format&fit=crop",
+      "tag": "Spine & Ribs"
+    }
+  ]
+}

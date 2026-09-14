@@ -1,0 +1,101 @@
+---
+import { ShieldCheck, Heart, ArrowUpRight } from '@lucide/astro';
+
+const styles = ['Irezumi', 'Fine Line', 'Micro-Realism', 'Blackwork', 'Watercolor', 'Geometric'];
+const guides = [
+  { title: 'Best Aftercare Balms', href: '/guides/best-tattoo-aftercare-products-2026' },
+  { title: 'Top Wireless Machines', href: '/guides/best-wireless-tattoo-machines-2026' },
+];
+---
+
+<footer class="border-t border-zinc-800/80 bg-zinc-950 text-zinc-400">
+  <!-- Main Footer Content -->
+  <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-5">
+      <!-- Brand & Mission -->
+      <div class="lg:col-span-2 space-y-4">
+        <div class="flex items-center gap-3">
+          <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 p-[1px]">
+            <div class="flex h-full w-full items-center justify-center rounded-[7px] bg-zinc-950">
+              <span class="text-base font-black text-amber-400 font-serif">TG</span>
+            </div>
+          </div>
+          <span class="text-lg font-black tracking-wider text-white">TATTOO<span class="text-amber-400">GOAT</span></span>
+        </div>
+        <p class="text-sm leading-relaxed text-zinc-400 max-w-sm">
+          The definitive index of the world's greatest tattoo masters and independently tested aftercare, inks, and rotary machines. Setting the gold standard for collector culture.
+        </p>
+        <div class="flex items-center gap-2 text-xs text-zinc-500">
+          <ShieldCheck class="h-4 w-4 text-amber-400" />
+          <span>Independent editorial reviews & zero pay-for-rank policy</span>
+        </div>
+      </div>
+
+      <!-- Styles Navigation -->
+      <div class="space-y-3">
+        <h3 class="text-xs font-bold uppercase tracking-widest text-zinc-200">Styles & Movements</h3>
+        <ul class="space-y-2 text-sm">
+          {styles.map((style) => (
+            <li>
+              <a
+                href={`/artists?style=${encodeURIComponent(style)}`}
+                class="hover:text-amber-300 transition-colors"
+              >
+                {style}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Essential Guides -->
+      <div class="space-y-3">
+        <h3 class="text-xs font-bold uppercase tracking-widest text-zinc-200">Buying & Care Guides</h3>
+        <ul class="space-y-2 text-sm">
+          {guides.map((g) => (
+            <li>
+              <a href={g.href} class="hover:text-amber-300 transition-colors">
+                {g.title}
+              </a>
+            </li>
+          ))}
+          <li>
+            <a href="/guides" class="inline-flex items-center gap-1 text-amber-400 hover:text-amber-300 text-xs font-semibold pt-1">
+              <span>View All Guides</span>
+              <ArrowUpRight class="h-3.5 w-3.5" />
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Community & Nominate -->
+      <div class="space-y-3">
+        <h3 class="text-xs font-bold uppercase tracking-widest text-zinc-200">The Archive</h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href="/artists" class="hover:text-amber-300 transition-colors">Hall of Fame Index</a>
+          </li>
+          <li>
+            <a href="/nominate" class="hover:text-amber-300 transition-colors">Nominate an Artist</a>
+          </li>
+          <li>
+            <a href="/about" class="hover:text-amber-300 transition-colors">Editorial Philosophy</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- FTC Affiliate Disclosure -->
+    <div class="mt-12 rounded-xl border border-zinc-900 bg-zinc-900/40 p-4 text-xs leading-relaxed text-zinc-500">
+      <strong class="text-zinc-400">Affiliate & Editorial Disclosure:</strong> Tattoo GOAT is an independent publication supported by our readers. When you purchase products through our links, we may earn an affiliate commission at no additional cost to you. We only recommend gear and aftercare balms that meet our rigorous performance standards.
+    </div>
+
+    <!-- Copyright -->
+    <div class="mt-8 flex flex-col items-center justify-between gap-4 border-t border-zinc-900 pt-8 sm:flex-row text-xs text-zinc-600">
+      <p>© {new Date().getFullYear()} Tattoo GOAT (tattoogoat.com). All rights reserved.</p>
+      <p class="flex items-center gap-1">
+        Crafted for ink collectors & tattoo purists
+      </p>
+    </div>
+  </div>
+</footer>

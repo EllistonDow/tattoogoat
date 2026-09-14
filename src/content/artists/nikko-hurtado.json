@@ -1,0 +1,35 @@
+{
+  "name": "Nikko Hurtado",
+  "handle": "@nikkohurtado",
+  "headline": "Grandmaster of Full-Color Hyper-Realistic Portraiture",
+  "city": "Los Angeles",
+  "country": "United States",
+  "studio": "Black Anchor Worldwide",
+  "styles": [
+    "Color Realism",
+    "Portraiture",
+    "Photorealism",
+    "Pop Culture"
+  ],
+  "badge": "Color King",
+  "bio": "Nikko Hurtado broke the color barrier in the early 2000s with his groundbreaking technicolor portraits. His ability to mimic oil paint translucency, reflections in pupils, and exact skin tones changed the possibilities of color tattooing forever.",
+  "instagram": "https://instagram.com/nikkohurtado",
+  "bookingUrl": "https://blackanchorworldwide.com",
+  "bookingStatus": "Open",
+  "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop",
+  "coverImage": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=1400&auto=format&fit=crop",
+  "experienceYears": 22,
+  "awards": [
+    "Best in Color (Worldwide Conventions)",
+    "Inked Magazine Icon Award"
+  ],
+  "featured": true,
+  "rank": 6,
+  "signatureWork": [
+    {
+      "title": "Hyper-Vivid Renaissance Madonna Color Portrait",
+      "image": "https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?q=80&w=800&auto=format&fit=crop",
+      "tag": "Outer Thigh"
+    }
+  ]
+}

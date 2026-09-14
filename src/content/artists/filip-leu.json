@@ -1,0 +1,35 @@
+{
+  "name": "Filip Leu",
+  "handle": "@filipleu",
+  "headline": "Global Titan of Modern Tattoo Heritage & The Leu Family Dynastic Art",
+  "city": "Sainte-Croix",
+  "country": "Switzerland",
+  "studio": "The Leu Family Iron",
+  "styles": [
+    "Contemporary Japanese",
+    "Freehand",
+    "Psychedelic Bio-Organic",
+    "Bodysuit"
+  ],
+  "badge": "Living Legend",
+  "bio": "Born into legendary tattoo royalty as the son of Felix Leu, Filip Leu is widely regarded as one of the single most influential tattoo artists of the late 20th and early 21st centuries. His innovative blending of classical Japanese composition with Swiss surrealism inspired three generations of working tattooers.",
+  "instagram": "https://instagram.com/filipleu",
+  "bookingUrl": "https://leufamilyiron.com",
+  "bookingStatus": "Books Closed",
+  "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop",
+  "coverImage": "https://images.unsplash.com/photo-1562962230-16e4623d36e6?q=80&w=1400&auto=format&fit=crop",
+  "experienceYears": 42,
+  "awards": [
+    "Lifetime Achievement Award Mondial du Tatouage",
+    "Co-Founder of Art Brut Tattoo Archive"
+  ],
+  "featured": false,
+  "rank": 10,
+  "signatureWork": [
+    {
+      "title": "Biomechanical Dragon Full Bodysuit Concept",
+      "image": "https://images.unsplash.com/photo-1565058379802-dd10214815a5?q=80&w=800&auto=format&fit=crop",
+      "tag": "Master Bodysuit"
+    }
+  ]
+}

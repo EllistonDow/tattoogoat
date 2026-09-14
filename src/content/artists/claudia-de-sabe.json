@@ -1,0 +1,35 @@
+{
+  "name": "Claudia de Sabe",
+  "handle": "@claudiadesabe",
+  "headline": "Western-Eastern Fusion Virtuoso & Creator of the World First Tattooed Car",
+  "city": "London",
+  "country": "United Kingdom",
+  "studio": "Seven Doors Tattoo",
+  "styles": [
+    "Neo-Traditional",
+    "Japanese Traditional",
+    "Western-Eastern Fusion",
+    "Floral"
+  ],
+  "badge": "Modern Master",
+  "bio": "Based in London at the acclaimed Seven Doors Tattoo, Claudia de Sabe is celebrated for her romantic synthesis of traditional Japanese imagery, Art Nouveau, and bold Western lines. Commissioned by Lexus to create the world’s first tattooed automobile, she is a titan of contemporary British tattoo culture.",
+  "instagram": "https://instagram.com/claudiadesabe",
+  "bookingUrl": "https://sevendoorstattoo.com",
+  "bookingStatus": "Open",
+  "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop",
+  "coverImage": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=1400&auto=format&fit=crop",
+  "experienceYears": 20,
+  "awards": [
+    "Lexus Global Brand Artist",
+    "London International Tattoo Convention Best Color"
+  ],
+  "featured": false,
+  "rank": 12,
+  "signatureWork": [
+    {
+      "title": "Geisha with Peonies & Swallow Sleeve",
+      "image": "https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?q=80&w=800&auto=format&fit=crop",
+      "tag": "Sleeve"
+    }
+  ]
+}

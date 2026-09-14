@@ -1,0 +1,35 @@
+{
+  "name": "Shige (Shigenori Iwasaki)",
+  "handle": "@shige_yellowblaze",
+  "headline": "Virtuoso of Neo-Japanese Irezumi & Dynamic Flow Architecture",
+  "city": "Yokohama",
+  "country": "Japan",
+  "studio": "Yellow Blaze Tattoo Studio",
+  "styles": [
+    "Neo-Japanese",
+    "Irezumi",
+    "Full Bodysuit",
+    "Dynamic Composition"
+  ],
+  "badge": "Living Legend",
+  "bio": "Trained originally in motorcycle engineering, Shige revolutionized Japanese Irezumi by infusing traditional Ukiyo-e motifs with three-dimensional anatomical kinetics. His full bodysuits feature unprecedented depth, luminous colors, and explosive tidal flow that wrap the human form like living armor.",
+  "instagram": "https://instagram.com/shige_yellowblaze",
+  "bookingUrl": "https://yellowblaze.net",
+  "bookingStatus": "Books Closed",
+  "avatar": "https://images.unsplash.com/photo-1542385151-efd9000785a0?q=80&w=600&auto=format&fit=crop",
+  "coverImage": "https://images.unsplash.com/photo-1565058379802-dd10214815a5?q=80&w=1400&auto=format&fit=crop",
+  "experienceYears": 28,
+  "awards": [
+    "Best of Show Milan Tattoo Convention",
+    "Author of Shige: The Art of Yellow Blaze"
+  ],
+  "featured": true,
+  "rank": 7,
+  "signatureWork": [
+    {
+      "title": "Full Backpiece Dragon Rising from Tempest Waves",
+      "image": "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?q=80&w=800&auto=format&fit=crop",
+      "tag": "Full Suit"
+    }
+  ]
+}

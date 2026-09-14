@@ -1,0 +1,36 @@
+{
+  "name": "Mister Cartoon",
+  "handle": "@misterctoons",
+  "headline": "Godfather of Fineline Black & Grey, West Coast Chicano Icon",
+  "city": "Los Angeles",
+  "country": "United States",
+  "studio": "Sanctuary Studios LA",
+  "styles": [
+    "Fineline",
+    "Chicano",
+    "Black & Grey",
+    "Lettering",
+    "Street Culture"
+  ],
+  "badge": "Cultural Icon",
+  "bio": "Mark Machado, universally known as Mister Cartoon, is the definitive architect of West Coast street culture and single-needle fineline black and grey. Originating in East LA graffiti culture, his work adorned legends including Eminem, Snoop Dogg, Dr. Dre, and Kobe Bryant, bridging underground street expression with global museum recognition.",
+  "instagram": "https://instagram.com/misterctoons",
+  "bookingUrl": "https://mistercartoon.com",
+  "bookingStatus": "By Referral",
+  "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop",
+  "coverImage": "https://images.unsplash.com/photo-1550537687-c91072c4792d?q=80&w=1400&auto=format&fit=crop",
+  "experienceYears": 32,
+  "awards": [
+    "LA Mayor Cultural Impact Award",
+    "Smithsonian Exhibition Honoree"
+  ],
+  "featured": true,
+  "rank": 4,
+  "signatureWork": [
+    {
+      "title": "Classic West Coast Clown Girl & Lowrider Canvas",
+      "image": "https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?q=80&w=800&auto=format&fit=crop",
+      "tag": "Backpiece"
+    }
+  ]
+}

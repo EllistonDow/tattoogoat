@@ -1,0 +1,206 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ArtistCard from '../components/ArtistCard.astro';
+import GuideCard from '../components/GuideCard.astro';
+import { getCollection } from 'astro:content';
+import { Award, ShieldCheck, Sparkles, ArrowRight, Compass, Flame, BookOpen } from '@lucide/astro';
+
+const allArtists = await getCollection('artists');
+const sortedArtists = allArtists.sort((a, b) => (a.data.rank ?? 99) - (b.data.rank ?? 99));
+const featuredArtists = sortedArtists.slice(0, 4);
+
+const allGuides = await getCollection('guides');
+const sortedGuides = allGuides.sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime());
+
+const popularStyles = [
+  { name: 'Irezumi', count: 'Japanese Masters' },
+  { name: 'Fine Line', count: 'Single-Needle' },
+  { name: 'Photorealism', count: 'Black & Grey' },
+  { name: 'Watercolor', count: 'Color Innovation' },
+  { name: 'Geometric', count: 'Avant-Garde' },
+];
+---
+
+<BaseLayout
+  title="Tattoo GOAT | The Hall of Fame for Tattoo Masters & Tested Gear"
+  description="The definitive global directory of the greatest tattoo artists and independently tested aftercare balms, wireless machines, and inks."
+>
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden border-b border-zinc-800/80 bg-gradient-to-b from-zinc-950 via-zinc-900/60 to-zinc-950 py-20 sm:py-28">
+    <!-- Ambient gold background glow -->
+    <div class="pointer-events-none absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 h-96 w-96 rounded-full bg-amber-500/10 blur-[120px]"></div>
+
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+      <!-- Tag pill -->
+      <div class="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-400/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-amber-300">
+        <Sparkles class="h-3.5 w-3.5 text-amber-400" />
+        <span>The Greatest of All Time Archive</span>
+      </div>
+
+      <h1 class="mx-auto mt-6 max-w-4xl text-4xl font-extrabold tracking-tight text-white sm:text-6xl sm:leading-[1.15]">
+        The Hall of Fame for the <br class="hidden sm:inline" />
+        <span class="gold-gradient-text font-serif italic">Greatest Tattoo Masters</span> on Earth
+      </h1>
+
+      <p class="mx-auto mt-6 max-w-2xl text-base sm:text-lg text-zinc-400 leading-relaxed">
+        We curate the living legends of ink across Tokyo, New York, Seoul, and Berlin—paired with laboratory-tested reviews of medical aftercare and precision wireless machines.
+      </p>
+
+      <!-- Quick CTAs -->
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+        <a
+          href="/artists"
+          class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 px-6 py-3 text-sm font-bold text-black shadow-lg shadow-amber-500/20 transition-all hover:scale-105"
+        >
+          <Award class="h-4 w-4" />
+          <span>Explore GOAT Artists</span>
+        </a>
+        <a
+          href="/guides"
+          class="inline-flex items-center gap-2 rounded-xl border border-zinc-700 bg-zinc-900/80 px-6 py-3 text-sm font-semibold text-zinc-200 transition-all hover:bg-zinc-800 hover:text-white"
+        >
+          <BookOpen class="h-4 w-4 text-amber-400" />
+          <span>Read Gear Reviews</span>
+        </a>
+      </div>
+
+      <!-- Trust Metrics Bar -->
+      <div class="mx-auto mt-14 grid max-w-3xl grid-cols-2 gap-4 rounded-2xl border border-zinc-800/80 bg-zinc-900/40 p-5 backdrop-blur-md sm:grid-cols-3">
+        <div class="text-center">
+          <p class="text-2xl font-black text-amber-400 font-serif">100%</p>
+          <p class="text-[11px] font-medium uppercase tracking-wider text-zinc-400 mt-0.5">Editorial Integrity</p>
+        </div>
+        <div class="text-center">
+          <p class="text-2xl font-black text-white font-serif">Zero</p>
+          <p class="text-[11px] font-medium uppercase tracking-wider text-zinc-400 mt-0.5">Pay-for-Rank Policy</p>
+        </div>
+        <div class="col-span-2 sm:col-span-1 text-center">
+          <p class="text-2xl font-black text-amber-400 font-serif">Top Tier</p>
+          <p class="text-[11px] font-medium uppercase tracking-wider text-zinc-400 mt-0.5">Global Artist Index</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Style Filter Shortcuts -->
+  <section class="border-b border-zinc-800/80 bg-zinc-950 py-8">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-zinc-400">
+          <Compass class="h-4 w-4 text-amber-400" />
+          <span>Browse by Movement:</span>
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+          {popularStyles.map((s) => (
+            <a
+              href={`/artists?style=${encodeURIComponent(s.name)}`}
+              class="group flex items-center gap-2 rounded-xl border border-zinc-800 bg-zinc-900/70 px-3.5 py-1.5 text-xs font-medium text-zinc-300 transition-all hover:border-amber-400/40 hover:bg-zinc-800 hover:text-white"
+            >
+              <span>{s.name}</span>
+              <span class="text-[10px] text-zinc-500 group-hover:text-amber-300">· {s.count}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hall of Fame Artists Spotlight (Direction 2) -->
+  <section class="py-16 sm:py-24 bg-[#09090b]">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
+        <div>
+          <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-amber-400">
+            <Award class="h-4 w-4" />
+            <span>Master Directory</span>
+          </div>
+          <h2 class="mt-2 text-3xl font-black tracking-tight text-white sm:text-4xl">
+            The Living GOATs of Tattooing
+          </h2>
+          <p class="mt-2 text-sm text-zinc-400 max-w-xl">
+            Icons whose needlework pushed the boundaries of human skin into fine art.
+          </p>
+        </div>
+
+        <a
+          href="/artists"
+          class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-400 hover:text-amber-300 transition-colors self-start sm:self-auto"
+        >
+          <span>View All Indexed Masters</span>
+          <ArrowRight class="h-4 w-4" />
+        </a>
+      </div>
+
+      <!-- Artist Grid -->
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {featuredArtists.map((artist) => (
+          <ArtistCard artist={artist} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Gear Lab & Aftercare Section (Direction 5) -->
+  <section class="border-t border-zinc-800/80 bg-zinc-900/30 py-16 sm:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
+        <div>
+          <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-emerald-400">
+            <ShieldCheck class="h-4 w-4" />
+            <span>The Gear & Aftercare Lab</span>
+          </div>
+          <h2 class="mt-2 text-3xl font-black tracking-tight text-white sm:text-4xl">
+            Tested & Verified Buying Guides
+          </h2>
+          <p class="mt-2 text-sm text-zinc-400 max-w-xl">
+            Protect your tattoos and elevate your craft with our laboratory-tested recommendations.
+          </p>
+        </div>
+
+        <a
+          href="/guides"
+          class="inline-flex items-center gap-1.5 text-sm font-bold text-amber-400 hover:text-amber-300 transition-colors self-start sm:self-auto"
+        >
+          <span>All Tested Products</span>
+          <ArrowRight class="h-4 w-4" />
+        </a>
+      </div>
+
+      <!-- Guides Grid -->
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+        {sortedGuides.map((guide) => (
+          <GuideCard guide={guide} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nominate Artist Growth Banner -->
+  <section class="border-t border-zinc-800/80 bg-zinc-950 py-16">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="relative overflow-hidden rounded-3xl border border-amber-500/30 bg-gradient-to-r from-zinc-900 via-amber-950/20 to-zinc-900 p-8 sm:p-12">
+        <div class="relative z-10 max-w-2xl">
+          <span class="inline-flex items-center gap-1.5 rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-amber-300">
+            <Flame class="h-3.5 w-3.5" />
+            Community Curation
+          </span>
+          <h3 class="mt-4 text-2xl sm:text-3xl font-black text-white">
+            Know an Artist Deserving of the <span class="text-amber-400">G.O.A.T. Badge</span>?
+          </h3>
+          <p class="mt-3 text-sm text-zinc-400 leading-relaxed">
+            Our editorial board reviews peer nominations from collectors and fellow tattooers worldwide. Help us document the true masters of the craft.
+          </p>
+          <div class="mt-6">
+            <a
+              href="/nominate"
+              class="inline-flex items-center gap-2 rounded-xl bg-amber-400 px-6 py-3 text-sm font-bold text-black shadow-lg shadow-amber-400/20 transition-all hover:bg-amber-300"
+            >
+              <span>Submit a Nomination</span>
+              <ArrowRight class="h-4 w-4" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

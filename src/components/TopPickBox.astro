@@ -1,0 +1,121 @@
+---
+import { Star, Check, X, ExternalLink, ShieldCheck } from '@lucide/astro';
+
+interface Props {
+  pick: {
+    name: string;
+    badge: string;
+    rating: number;
+    keyFeature: string;
+    priceTier: string;
+    pros: string[];
+    cons: string[];
+    affiliateUrl: string;
+    image: string;
+  };
+  rank: number;
+}
+
+const { pick, rank } = Astro.props;
+---
+
+<div class="my-8 overflow-hidden rounded-2xl border-2 border-amber-500/30 bg-gradient-to-b from-zinc-900/90 to-zinc-950 p-6 shadow-2xl transition-all hover:border-amber-400/50">
+  <!-- Top Header Banner -->
+  <div class="flex flex-wrap items-center justify-between gap-3 border-b border-zinc-800 pb-4">
+    <div class="flex items-center gap-2.5">
+      <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-amber-400 text-xs font-black text-black">
+        #{rank}
+      </span>
+      <span class="rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-0.5 text-xs font-bold text-amber-300">
+        {pick.badge}
+      </span>
+    </div>
+
+    <!-- Rating & Price -->
+    <div class="flex items-center gap-4 text-xs font-semibold">
+      <div class="flex items-center gap-1 text-amber-400">
+        <Star class="h-4 w-4 fill-amber-400 text-amber-400" />
+        <span>{pick.rating.toFixed(1)} / 5.0</span>
+      </div>
+      <span class="rounded bg-zinc-800 px-2 py-0.5 text-zinc-300 font-mono tracking-wider">
+        {pick.priceTier}
+      </span>
+    </div>
+  </div>
+
+  <!-- Product Body -->
+  <div class="mt-6 grid grid-cols-1 gap-6 md:grid-cols-12">
+    <!-- Image -->
+    <div class="flex items-center justify-center md:col-span-4">
+      <div class="relative h-48 w-full overflow-hidden rounded-xl bg-zinc-950 border border-zinc-800">
+        <img
+          src={pick.image}
+          alt={pick.name}
+          class="h-full w-full object-cover"
+          loading="lazy"
+        />
+      </div>
+    </div>
+
+    <!-- Details -->
+    <div class="flex flex-col justify-between md:col-span-8">
+      <div>
+        <h4 class="text-xl font-bold text-white">{pick.name}</h4>
+        <p class="mt-1 text-sm font-medium text-amber-400/90">{pick.keyFeature}</p>
+
+        <!-- Pros and Cons -->
+        <div class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+          <!-- Pros -->
+          <div class="rounded-xl border border-emerald-500/20 bg-emerald-950/20 p-3">
+            <h5 class="text-[11px] font-bold uppercase tracking-wider text-emerald-400 flex items-center gap-1 mb-2">
+              <Check class="h-3.5 w-3.5" />
+              <span>Why We Love It</span>
+            </h5>
+            <ul class="space-y-1.5 text-xs text-zinc-300">
+              {pick.pros.map((pro) => (
+                <li class="flex items-start gap-1.5">
+                  <span class="text-emerald-400 font-bold shrink-0">✓</span>
+                  <span>{pro}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Cons -->
+          <div class="rounded-xl border border-zinc-800 bg-zinc-900/40 p-3">
+            <h5 class="text-[11px] font-bold uppercase tracking-wider text-zinc-400 flex items-center gap-1 mb-2">
+              <X class="h-3.5 w-3.5" />
+              <span>Drawbacks</span>
+            </h5>
+            <ul class="space-y-1.5 text-xs text-zinc-400">
+              {pick.cons.map((con) => (
+                <li class="flex items-start gap-1.5">
+                  <span class="text-zinc-500 shrink-0">•</span>
+                  <span>{con}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Outbound CTA Button -->
+      <div class="mt-6 flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-zinc-800/80">
+        <div class="flex items-center gap-1.5 text-[11px] text-zinc-500">
+          <ShieldCheck class="h-3.5 w-3.5 text-amber-400" />
+          <span>Verified authentic stockist</span>
+        </div>
+
+        <a
+          href={pick.affiliateUrl}
+          target="_blank"
+          rel="sponsored noopener noreferrer"
+          class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 px-6 py-2.5 text-sm font-bold text-black shadow-lg shadow-amber-500/20 transition-all hover:scale-[1.02] hover:shadow-amber-500/30"
+        >
+          <span>Check Current Price</span>
+          <ExternalLink class="h-4 w-4" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

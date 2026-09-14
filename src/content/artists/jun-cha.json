@@ -1,0 +1,35 @@
+{
+  "name": "Jun Cha",
+  "handle": "@juncha",
+  "headline": "Classical Renaissance Sculptural Realism in Single-Needle Black & Grey",
+  "city": "Los Angeles",
+  "country": "United States",
+  "studio": "MONARC Studios",
+  "styles": [
+    "Black & Grey",
+    "Renaissance Realism",
+    "Single-Needle",
+    "Classical Sculpture"
+  ],
+  "badge": "Master Sculptor",
+  "bio": "Apprenticed under Mr. Cartoon and Baby Ray in East Los Angeles, Jun Cha took the Chicano fineline tradition into the world of Italian Renaissance marble sculpture. His depictions of Michelangelo, Bernini, and Greco-Roman gods look as though chiseled directly out of Carrara marble.",
+  "instagram": "https://instagram.com/juncha",
+  "bookingUrl": "https://monarcstudios.com",
+  "bookingStatus": "Waitlist",
+  "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop",
+  "coverImage": "https://images.unsplash.com/photo-1550537687-c91072c4792d?q=80&w=1400&auto=format&fit=crop",
+  "experienceYears": 18,
+  "awards": [
+    "MONARC Editions Fine Art Laureate",
+    "Lucerne Fine Arts Fellow"
+  ],
+  "featured": false,
+  "rank": 11,
+  "signatureWork": [
+    {
+      "title": "Bernini Rape of Proserpina Sculptural Backpiece",
+      "image": "https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?q=80&w=800&auto=format&fit=crop",
+      "tag": "Backpiece"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+---
+import { Clock, Calendar, ArrowRight, CheckCircle } from '@lucide/astro';
+
+interface Props {
+  guide: {
+    id: string;
+    data: {
+      title: string;
+      description: string;
+      category: string;
+      categoryLabel: string;
+      publishDate: string;
+      readTime: string;
+      heroImage: string;
+      author: {
+        name: string;
+        role: string;
+        avatar: string;
+      };
+      topPicks?: Array<any>;
+    };
+  };
+}
+
+const { guide } = Astro.props;
+const { data, id } = guide;
+---
+
+<article class="group relative flex flex-col overflow-hidden rounded-2xl border border-zinc-800/80 bg-zinc-900/50 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-amber-500/40 hover:shadow-xl hover:shadow-black/60">
+  <!-- Hero Image -->
+  <div class="relative h-52 w-full overflow-hidden bg-zinc-950">
+    <img
+      src={data.heroImage}
+      alt={data.title}
+      class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+      loading="lazy"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent"></div>
+
+    <!-- Category Badge -->
+    <div class="absolute top-3 left-3">
+      <span class="rounded-md border border-zinc-700/80 bg-zinc-950/90 px-2.5 py-1 text-[11px] font-bold text-amber-300 backdrop-blur-md uppercase tracking-wider">
+        {data.categoryLabel}
+      </span>
+    </div>
+
+    <!-- Top Picks Tested Indicator -->
+    {data.topPicks && data.topPicks.length > 0 && (
+      <div class="absolute bottom-3 right-3">
+        <span class="inline-flex items-center gap-1 rounded-full border border-emerald-500/40 bg-zinc-950/90 px-2.5 py-0.5 text-[10px] font-bold text-emerald-300 backdrop-blur-md">
+          <CheckCircle class="h-3 w-3 text-emerald-400" />
+          {data.topPicks.length} Lab Tested Picks
+        </span>
+      </div>
+    )}
+  </div>
+
+  <!-- Content -->
+  <div class="flex flex-1 flex-col p-6">
+    <h3 class="text-lg font-bold text-white group-hover:text-amber-300 transition-colors line-clamp-2">
+      <a href={`/guides/${id}`} class="after:absolute after:inset-0">
+        {data.title}
+      </a>
+    </h3>
+
+    <p class="mt-2.5 text-xs leading-relaxed text-zinc-400 line-clamp-2">
+      {data.description}
+    </p>
+
+    <!-- Meta & Author -->
+    <div class="mt-auto pt-6 flex items-center justify-between border-t border-zinc-800/80 text-xs text-zinc-500">
+      <div class="flex items-center gap-2">
+        <img
+          src={data.author.avatar}
+          alt={data.author.name}
+          class="h-6 w-6 rounded-full object-cover border border-zinc-700"
+          loading="lazy"
+        />
+        <span class="font-medium text-zinc-300">{data.author.name}</span>
+      </div>
+
+      <div class="flex items-center gap-3 text-[11px]">
+        <span class="flex items-center gap-1">
+          <Clock class="h-3 w-3" />
+          {data.readTime}
+        </span>
+        <span class="inline-flex items-center gap-1 font-semibold text-amber-400 group-hover:translate-x-0.5 transition-transform">
+          <span>Read</span>
+          <ArrowRight class="h-3 w-3" />
+        </span>
+      </div>
+    </div>
+  </div>
+</article>

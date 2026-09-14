@@ -1,0 +1,165 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import TopPickBox from '../../components/TopPickBox.astro';
+import { getCollection, render } from 'astro:content';
+import {
+  Calendar,
+  Clock,
+  ArrowLeft,
+  ShieldCheck,
+  Award,
+  AlertCircle,
+  Share2,
+} from '@lucide/astro';
+
+export async function getStaticPaths() {
+  const guides = await getCollection('guides');
+  return guides.map((guide) => ({
+    params: { id: guide.id },
+    props: { guide },
+  }));
+}
+
+const { guide } = Astro.props;
+const { data, id } = guide;
+const { Content } = await render(guide);
+
+// Schema.org Article & Review structured data for Google
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: data.title,
+  description: data.description,
+  image: data.heroImage,
+  datePublished: data.publishDate,
+  dateModified: data.updatedDate || data.publishDate,
+  author: {
+    '@type': 'Person',
+    name: data.author.name,
+    jobTitle: data.author.role,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Tattoo GOAT',
+    url: 'https://tattoogoat.com',
+  },
+};
+---
+
+<BaseLayout
+  title={`${data.title} | Tattoo GOAT Lab`}
+  description={data.description}
+  image={data.heroImage}
+  type="article"
+  schema={articleSchema}
+>
+  <!-- Breadcrumbs -->
+  <div class="border-b border-zinc-800/60 bg-zinc-950 px-4 py-3 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-4xl">
+      <a
+        href="/guides"
+        class="inline-flex items-center gap-1.5 text-xs font-semibold text-zinc-400 hover:text-amber-300 transition-colors"
+      >
+        <ArrowLeft class="h-3.5 w-3.5" />
+        <span>Back to All Buying Guides</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Article Header -->
+  <header class="border-b border-zinc-800/80 bg-gradient-to-b from-zinc-950 via-zinc-900/40 to-zinc-950 py-12 sm:py-16">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-2">
+        <span class="rounded-md border border-amber-400/40 bg-amber-400/10 px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-amber-300">
+          {data.categoryLabel}
+        </span>
+        <span class="text-xs text-zinc-500">•</span>
+        <span class="text-xs font-medium text-emerald-400 flex items-center gap-1">
+          <ShieldCheck class="h-3.5 w-3.5" />
+          Independently Verified
+        </span>
+      </div>
+
+      <h1 class="mt-4 text-3xl font-black tracking-tight text-white sm:text-5xl sm:leading-[1.2]">
+        {data.title}
+      </h1>
+
+      <p class="mt-4 text-base sm:text-lg text-zinc-300 leading-relaxed">
+        {data.description}
+      </p>
+
+      <!-- Author and Meta info -->
+      <div class="mt-8 flex flex-wrap items-center justify-between gap-4 border-t border-zinc-800/80 pt-6">
+        <div class="flex items-center gap-3">
+          <img
+            src={data.author.avatar}
+            alt={data.author.name}
+            class="h-10 w-10 rounded-full object-cover border border-zinc-700 shadow-sm"
+          />
+          <div>
+            <p class="text-xs font-bold text-white">{data.author.name}</p>
+            <p class="text-[11px] text-zinc-400">{data.author.role}</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 text-xs text-zinc-400">
+          <span class="flex items-center gap-1.5">
+            <Calendar class="h-3.5 w-3.5 text-zinc-500" />
+            Updated {data.updatedDate || data.publishDate}
+          </span>
+          <span>•</span>
+          <span class="flex items-center gap-1.5">
+            <Clock class="h-3.5 w-3.5 text-zinc-500" />
+            {data.readTime}
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Article Hero Media -->
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 -mt-6">
+    <div class="relative overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950 shadow-2xl">
+      <img
+        src={data.heroImage}
+        alt={data.title}
+        class="h-72 sm:h-96 w-full object-cover"
+      />
+    </div>
+  </div>
+
+  <!-- Main Body Content -->
+  <div class="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
+    <!-- FTC Affiliate Notice -->
+    <div class="mb-10 rounded-xl border border-amber-500/20 bg-amber-500/5 p-4 text-xs leading-relaxed text-zinc-400 flex items-start gap-3">
+      <AlertCircle class="h-4 w-4 text-amber-400 shrink-0 mt-0.5" />
+      <div>
+        <strong class="text-amber-300 font-semibold">Reader Support Notice:</strong> Every product in this guide was purchased by our lab or tested in active tattoo studios. When you click retail links and make a purchase, we may receive an affiliate commission at zero additional cost to you.
+      </div>
+    </div>
+
+    <!-- Quick Navigation / Top Tested Picks -->
+    {data.topPicks && data.topPicks.length > 0 && (
+      <div class="mb-14">
+        <div class="flex items-center gap-2 mb-2">
+          <Award class="h-5 w-5 text-amber-400" />
+          <h2 class="text-2xl font-black text-white">Our Tested Top Picks</h2>
+        </div>
+        <p class="text-xs text-zinc-400 mb-6">
+          Ranked based on ingredient purity, skin breathability, and feedback from professional tattooers.
+        </p>
+
+        <div class="space-y-6">
+          {data.topPicks.map((pick, idx) => (
+            <TopPickBox pick={pick} rank={idx + 1} />
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- Markdown Editorial Body -->
+    <div class="prose prose-invert max-w-none prose-headings:font-bold prose-headings:text-white prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:border-b prose-h2:border-zinc-800 prose-h2:pb-2 prose-h3:text-lg prose-p:text-zinc-300 prose-p:leading-relaxed prose-li:text-zinc-300 prose-strong:text-amber-300">
+      <Content />
+    </div>
+  </div>
+</BaseLayout>

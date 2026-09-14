@@ -1,0 +1,32 @@
+{
+  "name": "Dr. Woo",
+  "handle": "@_dr_woo_",
+  "headline": "Global Vanguard of Single-Needle Fine Line & Micro-Realism",
+  "city": "Los Angeles",
+  "country": "United States",
+  "studio": "Hideaway at The Hollywood Roosevelt",
+  "styles": ["Fine Line", "Micro-Realism", "Single-Needle", "Geometric Minimalist"],
+  "badge": "Modern Icon",
+  "bio": "Brian Woo, known worldwide as Dr. Woo, catalyzed the global fine-line tattoo revolution. Apprenticed under Mark Mahoney at the legendary Shamrock Social Club, Woo pioneered whisper-thin needle techniques that capture mind-boggling detail in celestial maps, hyper-detailed animals, and intricate flora on micro-scales.",
+  "instagram": "https://instagram.com/_dr_woo_",
+  "bookingUrl": "https://drwoo.com/appointment",
+  "bookingStatus": "Waitlist",
+  "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop",
+  "coverImage": "https://images.unsplash.com/photo-1550537687-c91072c4792d?q=80&w=1400&auto=format&fit=crop",
+  "experienceYears": 18,
+  "awards": ["GQ Creative of the Year", "Vogue Global Aesthetic Innovator"],
+  "featured": true,
+  "rank": 2,
+  "signatureWork": [
+    {
+      "title": "Celestial Constellation & Micro Sphere",
+      "image": "https://images.unsplash.com/photo-1590246814883-578337851d7e?q=80&w=800&auto=format&fit=crop",
+      "tag": "Forearm"
+    },
+    {
+      "title": "Hyper-Detailed Micro Hummingbird",
+      "image": "https://images.unsplash.com/photo-1562962230-16e4623d36e6?q=80&w=800&auto=format&fit=crop",
+      "tag": "Inner Bicep"
+    }
+  ]
+}

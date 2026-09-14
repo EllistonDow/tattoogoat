@@ -1,0 +1,182 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Award, Sparkles, Send, ShieldCheck, CheckCircle2 } from '@lucide/astro';
+---
+
+<BaseLayout
+  title="Nominate a Tattoo Artist | Tattoo GOAT Hall of Fame"
+  description="Nominate an exceptional tattoo artist for induction into the Tattoo GOAT global directory. Evaluated by our editorial standards for technique, longevity, and artistry."
+>
+  <div class="border-b border-zinc-800/80 bg-gradient-to-b from-zinc-950 via-zinc-900/50 to-zinc-950 py-16">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center gap-1.5 rounded-full border border-amber-400/30 bg-amber-400/10 px-3.5 py-1 text-xs font-bold uppercase tracking-widest text-amber-300">
+        <Sparkles class="h-3.5 w-3.5" />
+        <span>Community & Peer Curation</span>
+      </div>
+      <h1 class="mt-4 text-3xl font-black text-white sm:text-5xl">
+        Nominate a <span class="gold-gradient-text font-serif italic">G.O.A.T.</span> Artist
+      </h1>
+      <p class="mt-3 text-sm sm:text-base text-zinc-400 leading-relaxed">
+        Do you know a master tattooer whose linework, originality, and technical brilliance deserves inclusion in the world's most prestigious tattoo directory?
+      </p>
+    </div>
+  </div>
+
+  <div class="mx-auto max-w-2xl px-4 py-12 sm:px-6 lg:px-8">
+    <!-- Nomination Form Card -->
+    <div class="rounded-3xl border border-zinc-800/80 bg-zinc-900/60 p-6 sm:p-10 backdrop-blur-md shadow-2xl">
+      <form id="nomination-form" class="space-y-6">
+        <!-- Artist Name & Handle -->
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <div>
+            <label for="artist-name" class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">
+              Artist Full Name / Moniker *
+            </label>
+            <input
+              type="text"
+              id="artist-name"
+              required
+              placeholder="e.g. Horiyoshi III"
+              class="w-full rounded-xl border border-zinc-700 bg-zinc-950/80 px-4 py-2.5 text-sm text-white placeholder-zinc-500 focus:border-amber-400 focus:outline-none focus:ring-1 focus:ring-amber-400"
+            />
+          </div>
+
+          <div>
+            <label for="artist-handle" class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">
+              Instagram Handle *
+            </label>
+            <input
+              type="text"
+              id="artist-handle"
+              required
+              placeholder="@artist_handle"
+              class="w-full rounded-xl border border-zinc-700 bg-zinc-950/80 px-4 py-2.5 text-sm text-white placeholder-zinc-500 focus:border-amber-400 focus:outline-none focus:ring-1 focus:ring-amber-400"
+            />
+          </div>
+        </div>
+
+        <!-- Studio & Location -->
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <div>
+            <label for="artist-location" class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">
+              City & Country *
+            </label>
+            <input
+              type="text"
+              id="artist-location"
+              required
+              placeholder="e.g. Tokyo, Japan"
+              class="w-full rounded-xl border border-zinc-700 bg-zinc-950/80 px-4 py-2.5 text-sm text-white placeholder-zinc-500 focus:border-amber-400 focus:outline-none focus:ring-1 focus:ring-amber-400"
+            />
+          </div>
+
+          <div>
+            <label for="artist-studio" class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">
+              Primary Studio / Atelier
+            </label>
+            <input
+              type="text"
+              id="artist-studio"
+              placeholder="e.g. Private Studio"
+              class="w-full rounded-xl border border-zinc-700 bg-zinc-950/80 px-4 py-2.5 text-sm text-white placeholder-zinc-500 focus:border-amber-400 focus:outline-none focus:ring-1 focus:ring-amber-400"
+            />
+          </div>
+        </div>
+
+        <!-- Style Category -->
+        <div>
+          <label for="artist-style" class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">
+            Primary Style / Movement *
+          </label>
+          <select
+            id="artist-style"
+            required
+            class="w-full rounded-xl border border-zinc-700 bg-zinc-950/80 px-4 py-2.5 text-sm text-white focus:border-amber-400 focus:outline-none focus:ring-1 focus:ring-amber-400"
+          >
+            <option value="">Select Primary Movement...</option>
+            <option value="Irezumi">Traditional Japanese / Irezumi</option>
+            <option value="Fine Line">Fine Line & Single-Needle</option>
+            <option value="Realism">Micro-Realism / Photorealism</option>
+            <option value="Blackwork">Blackwork & Dark Ornamental</option>
+            <option value="Geometric">Geometric & Dotwork</option>
+            <option value="Watercolor">Watercolor & Neo-Contemporary</option>
+            <option value="Old School">Traditional American (Old School)</option>
+            <option value="Other">Other Unique Movement</option>
+          </select>
+        </div>
+
+        <!-- Nomination Case -->
+        <div>
+          <label for="nomination-reason" class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">
+            Why are they a G.O.A.T.? *
+          </label>
+          <textarea
+            id="nomination-reason"
+            rows="4"
+            required
+            placeholder="Tell us what makes their needlework, healed results, or cultural impact worthy of the Hall of Fame..."
+            class="w-full rounded-xl border border-zinc-700 bg-zinc-950/80 p-4 text-sm text-white placeholder-zinc-500 focus:border-amber-400 focus:outline-none focus:ring-1 focus:ring-amber-400"
+          ></textarea>
+        </div>
+
+        <!-- Submitter Contact -->
+        <div>
+          <label for="submitter-email" class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">
+            Your Email Address (for updates on induction)
+          </label>
+          <input
+            type="email"
+            id="submitter-email"
+            placeholder="collector@example.com"
+            class="w-full rounded-xl border border-zinc-700 bg-zinc-950/80 px-4 py-2.5 text-sm text-white placeholder-zinc-500 focus:border-amber-400 focus:outline-none focus:ring-1 focus:ring-amber-400"
+          />
+        </div>
+
+        <!-- Submit Button -->
+        <div>
+          <button
+            type="submit"
+            class="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 py-3 text-sm font-bold text-black shadow-lg shadow-amber-500/20 transition-all hover:scale-[1.01] hover:shadow-amber-500/30"
+          >
+            <Send class="h-4 w-4" />
+            <span>Submit Official Nomination</span>
+          </button>
+        </div>
+
+        <!-- Success Toast (Hidden initially) -->
+        <div id="success-message" class="hidden rounded-xl border border-emerald-500/40 bg-emerald-950/30 p-4 text-center">
+          <CheckCircle2 class="mx-auto h-6 w-6 text-emerald-400 mb-1" />
+          <p class="text-sm font-bold text-emerald-300">Nomination Received</p>
+          <p class="text-xs text-zinc-400 mt-1">Our curatorial board reviews new candidates monthly. Thank you for championing the craft.</p>
+        </div>
+      </form>
+    </div>
+
+    <!-- Editorial Criteria Box -->
+    <div class="mt-8 rounded-2xl border border-zinc-800/80 bg-zinc-900/30 p-6">
+      <h3 class="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-3 flex items-center gap-1.5">
+        <ShieldCheck class="h-4 w-4 text-amber-400" />
+        <span>Induction Criteria</span>
+      </h3>
+      <ul class="space-y-2 text-xs text-zinc-400">
+        <li>• <strong>Healed Longevity:</strong> Needlework must show verified clean aging after 3+ years.</li>
+        <li>• <strong>Technical Mastery:</strong> Flawless consistency in lining, skin trauma minimization, or gradient saturation.</li>
+        <li>• <strong>Zero Payola:</strong> No payments, gifts, or kickbacks are ever accepted for Hall of Fame inclusion.</li>
+      </ul>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  const form = document.getElementById('nomination-form') as HTMLFormElement | null;
+  const success = document.getElementById('success-message');
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (success) {
+      success.classList.remove('hidden');
+      form.reset();
+      window.scrollTo({ top: success.offsetTop - 100, behavior: 'smooth' });
+    }
+  });
+</script>

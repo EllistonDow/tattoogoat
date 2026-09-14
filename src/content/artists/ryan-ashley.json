@@ -1,0 +1,37 @@
+{
+  "name": "Ryan Ashley",
+  "handle": "@ryanashleymalarkey",
+  "headline": "Pioneer of Intricate Ornamental Filigree & Victorian Lace Black & Grey",
+  "city": "New York",
+  "country": "United States",
+  "studio": "The Elysium Studios & Private Atelier",
+  "styles": [
+    "Ornamental",
+    "Filigree",
+    "Black & Grey",
+    "Jewelry Realism",
+    "Lace"
+  ],
+  "badge": "Ink Master Champion",
+  "bio": "The historic first female champion of TV hit Ink Master, Ryan Ashley Malarkey translated high-fashion Victorian jewelry design and antique filigree into stunning dimensional skin adornments. Her work features realistic gemstones, draped pearl strings, and metallic baroque scrollwork.",
+  "instagram": "https://instagram.com/ryanashleymalarkey",
+  "bookingUrl": "https://ryanashley.com",
+  "bookingStatus": "Waitlist",
+  "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop",
+  "coverImage": "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1400&auto=format&fit=crop",
+  "experienceYears": 16,
+  "awards": [
+    "Ink Master Season 8 Winner",
+    "Ink Master Angels Host",
+    "Forbes 30 Under 30 Art & Style"
+  ],
+  "featured": false,
+  "rank": 9,
+  "signatureWork": [
+    {
+      "title": "Victorian Baroque Filigree & Chandelier Pearl Collar",
+      "image": "https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?q=80&w=800&auto=format&fit=crop",
+      "tag": "Chest Plate"
+    }
+  ]
+}

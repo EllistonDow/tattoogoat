@@ -1,0 +1,192 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArtistCard from '../../components/ArtistCard.astro';
+import { getCollection } from 'astro:content';
+import { Award, Search, Sparkles, Filter } from '@lucide/astro';
+
+const allArtists = await getCollection('artists');
+const sortedArtists = allArtists.sort((a, b) => (a.data.rank ?? 99) - (b.data.rank ?? 99));
+
+// Curated top primary movements for clean navigation
+const primaryStyles = [
+  'Irezumi',
+  'Fine Line',
+  'Black & Grey',
+  'Color Realism',
+  'Blackwork',
+  'Geometric',
+  'Dark Surrealism',
+  'Watercolor',
+  'Neo-Traditional',
+];
+---
+
+<BaseLayout
+  title="The Tattoo GOAT Hall of Fame | Global Master Directory"
+  description="Explore the world's most elite tattoo artists. Filter by style (Irezumi, Fine Line, Realism) and location (Tokyo, Los Angeles, New York, Berlin)."
+>
+  <div class="border-b border-zinc-800/80 bg-gradient-to-b from-zinc-950 via-zinc-900/50 to-zinc-950 py-12 sm:py-16">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-amber-400">
+        <Award class="h-4 w-4" />
+        <span>Curated Directory</span>
+      </div>
+      <h1 class="mt-2 text-3xl font-black text-white sm:text-5xl">
+        The Tattoo <span class="text-amber-400 font-serif italic">G.O.A.T.</span> Archive
+      </h1>
+      <p class="mt-3 max-w-2xl text-sm sm:text-base text-zinc-400">
+        Strictly peer-verified masters who have defined generations of tattoo culture. Zero paid placement, 100% artistry.
+      </p>
+
+      <!-- Instant Filter Bar -->
+      <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <!-- Search Input -->
+        <div class="relative w-full sm:w-80">
+          <Search class="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-zinc-500" />
+          <input
+            type="text"
+            id="artist-search"
+            placeholder="Search by artist, city, or style..."
+            class="w-full rounded-xl border border-zinc-800 bg-zinc-900/80 py-2.5 pl-10 pr-4 text-xs text-white placeholder-zinc-500 focus:border-amber-400 focus:outline-none focus:ring-1 focus:ring-amber-400"
+          />
+        </div>
+
+        <div class="flex items-center gap-2 text-xs text-zinc-400">
+          <Sparkles class="h-3.5 w-3.5 text-amber-400" />
+          <span>Showing <strong id="visible-count" class="text-white">{sortedArtists.length}</strong> living masters</span>
+        </div>
+      </div>
+
+      <!-- Style Pills -->
+      <div class="mt-6 flex flex-wrap gap-2" id="style-filters">
+        <button
+          type="button"
+          data-filter="all"
+          class="style-filter-btn active rounded-lg border border-amber-400 bg-amber-400/10 px-3 py-1 text-xs font-semibold text-amber-300 transition-all"
+        >
+          All Movements
+        </button>
+        {primaryStyles.map((style) => (
+          <button
+            type="button"
+            data-filter={style}
+            class="style-filter-btn rounded-lg border border-zinc-800 bg-zinc-900/60 px-3 py-1 text-xs font-medium text-zinc-400 transition-all hover:border-zinc-700 hover:text-white"
+          >
+            {style}
+          </button>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Catalog Grid -->
+  <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+    <div id="artists-grid" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {sortedArtists.map((artist) => (
+        <div
+          class="artist-item"
+          data-name={artist.data.name.toLowerCase()}
+          data-city={artist.data.city.toLowerCase()}
+          data-country={artist.data.country.toLowerCase()}
+          data-styles={artist.data.styles.join(',').toLowerCase()}
+        >
+          <ArtistCard artist={artist} />
+        </div>
+      ))}
+    </div>
+
+    <!-- Empty State (Hidden by default) -->
+    <div id="empty-state" class="hidden py-16 text-center">
+      <p class="text-base font-semibold text-zinc-300">No masters match your filter criteria</p>
+      <p class="mt-1 text-xs text-zinc-500">Try searching a different style, city, or clear your query.</p>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  const searchInput = document.getElementById('artist-search') as HTMLInputElement | null;
+  const filterBtns = document.querySelectorAll('.style-filter-btn');
+  const artistItems = document.querySelectorAll('.artist-item') as NodeListOf<HTMLElement>;
+  const emptyState = document.getElementById('empty-state');
+  const countEl = document.getElementById('visible-count');
+
+  let activeFilter = 'all';
+  let searchQuery = '';
+
+  // Check URL query parameters for style filter
+  const params = new URLSearchParams(window.location.search);
+  const styleParam = params.get('style');
+  if (styleParam) {
+    activeFilter = styleParam;
+    filterBtns.forEach((btn) => {
+      const filterVal = btn.getAttribute('data-filter');
+      if (filterVal?.toLowerCase() === styleParam.toLowerCase()) {
+        btn.classList.add('active', 'border-amber-400', 'bg-amber-400/10', 'text-amber-300');
+        btn.classList.remove('border-zinc-800', 'bg-zinc-900/60', 'text-zinc-400');
+      } else {
+        btn.classList.remove('active', 'border-amber-400', 'bg-amber-400/10', 'text-amber-300');
+        btn.classList.add('border-zinc-800', 'bg-zinc-900/60', 'text-zinc-400');
+      }
+    });
+  }
+
+  function applyFilters() {
+    let visibleCount = 0;
+    const query = searchQuery.trim().toLowerCase();
+
+    artistItems.forEach((item) => {
+      const name = item.dataset.name || '';
+      const city = item.dataset.city || '';
+      const country = item.dataset.country || '';
+      const styles = item.dataset.styles || '';
+
+      const matchesSearch =
+        !query ||
+        name.includes(query) ||
+        city.includes(query) ||
+        country.includes(query) ||
+        styles.includes(query);
+
+      const matchesStyle =
+        activeFilter === 'all' || styles.includes(activeFilter.toLowerCase());
+
+      if (matchesSearch && matchesStyle) {
+        item.style.display = '';
+        visibleCount++;
+      } else {
+        item.style.display = 'none';
+      }
+    });
+
+    if (countEl) countEl.textContent = visibleCount.toString();
+    if (emptyState) {
+      if (visibleCount === 0) {
+        emptyState.classList.remove('hidden');
+      } else {
+        emptyState.classList.add('hidden');
+      }
+    }
+  }
+
+  // Initial run in case URL had params
+  applyFilters();
+
+  searchInput?.addEventListener('input', (e) => {
+    searchQuery = (e.target as HTMLInputElement).value;
+    applyFilters();
+  });
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach((b) => {
+        b.classList.remove('active', 'border-amber-400', 'bg-amber-400/10', 'text-amber-300');
+        b.classList.add('border-zinc-800', 'bg-zinc-900/60', 'text-zinc-400');
+      });
+      btn.classList.add('active', 'border-amber-400', 'bg-amber-400/10', 'text-amber-300');
+      btn.classList.remove('border-zinc-800', 'bg-zinc-900/60', 'text-zinc-400');
+
+      activeFilter = btn.getAttribute('data-filter') || 'all';
+      applyFilters();
+    });
+  });
+</script>

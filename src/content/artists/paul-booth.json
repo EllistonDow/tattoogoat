@@ -1,0 +1,35 @@
+{
+  "name": "Paul Booth",
+  "handle": "@paulbooth",
+  "headline": "Undisputed Sovereign of Dark Surrealism & Macabre Realism",
+  "city": "New York",
+  "country": "United States",
+  "studio": "Last Rites Tattoo Theatre",
+  "styles": [
+    "Dark Surrealism",
+    "Black & Grey",
+    "Biomech",
+    "Horror Realism"
+  ],
+  "badge": "Dark Master",
+  "bio": "Paul Booth pioneered the dark surrealist tattoo movement from his storied Manhattan sanctuary, Last Rites. Inducted into the National Arts Club as the first tattoo artist in history, Booth is celebrated for biomechanical nightmares and evocative demonological portraits, having tattooed rock royalty including Slayer, Slipknot, and Pantera.",
+  "instagram": "https://instagram.com/paulbooth",
+  "bookingUrl": "https://paulboothart.com",
+  "bookingStatus": "Waitlist",
+  "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop",
+  "coverImage": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1400&auto=format&fit=crop",
+  "experienceYears": 35,
+  "awards": [
+    "Rolling Stone King of Rock Tattoos",
+    "First Tattooist Inducted into National Arts Club"
+  ],
+  "featured": true,
+  "rank": 5,
+  "signatureWork": [
+    {
+      "title": "Demonic Biomechanical Torso Piece",
+      "image": "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?q=80&w=800&auto=format&fit=crop",
+      "tag": "Torso"
+    }
+  ]
+}

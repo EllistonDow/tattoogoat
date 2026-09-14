@@ -1,0 +1,27 @@
+{
+  "name": "Sasha Unisex",
+  "handle": "@sashaunisex",
+  "headline": "Queen of Vivid Watercolor, Geometric Fauna & Color Saturation",
+  "city": "Rome",
+  "country": "Italy",
+  "studio": "Sasha Unisex Atelier",
+  "styles": ["Watercolor", "Neo-Contemporary", "Color Realism", "Geometric"],
+  "badge": "Color Innovator",
+  "bio": "Sasha Unisex turned traditional tattoo rules upside down by eliminating harsh black outlines altogether. Using vibrant gradient layering and geometric faceting inspired by poly-art, her foxes, wolves, and botanicals look like wet watercolor paintings permanently sealed onto human skin.",
+  "instagram": "https://instagram.com/sashaunisex",
+  "bookingUrl": "https://sashaunisex.com",
+  "bookingStatus": "Open",
+  "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop",
+  "coverImage": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=1400&auto=format&fit=crop",
+  "experienceYears": 14,
+  "awards": ["BMW Brand Collaboration Artist", "International Color Master Gold 2024"],
+  "featured": false,
+  "rank": 4,
+  "signatureWork": [
+    {
+      "title": "Geometric Prismatic Arctic Fox",
+      "image": "https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?q=80&w=800&auto=format&fit=crop",
+      "tag": "Shoulder"
+    }
+  ]
+}
