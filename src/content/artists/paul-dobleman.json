@@ -1,0 +1,27 @@
+{
+  "name": "Paul Dobleman",
+  "handle": "@pauldobleman",
+  "headline": "The Gold Standard of Modern American Traditional Tattooing",
+  "city": "San Francisco",
+  "country": "United States",
+  "studio": "Spider Murphy's Tattoo",
+  "styles": ["American Traditional", "Neo-Traditional", "Classic Flash", "Bold Color"],
+  "badge": "GOAT Hall of Fame",
+  "bio": "Paul Dobleman, hailing from the world-famous Spider Murphy's Tattoo in San Rafael and San Francisco, is revered as one of the quintessential guardians and evolvers of American Traditional flash and tattooing. Featuring heavy, crisp lines, rich golden ochres, velvety blacks, and unforgettable nautical and folk symbolism, Dobleman's flash books have become essential study material in traditional shops across the globe.",
+  "instagram": "https://instagram.com/pauldobleman",
+  "bookingUrl": "https://spidermurphys.com",
+  "bookingStatus": "Open",
+  "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop",
+  "coverImage": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1400&auto=format&fit=crop",
+  "experienceYears": 22,
+  "awards": ["Spider Murphy's Flash Book Vol 1 & 2 Contributor", "Best Traditional Master Artist Award"],
+  "featured": false,
+  "rank": 12,
+  "signatureWork": [
+    {
+      "title": "Classic American Traditional Eagle & Serpent Chest Piece",
+      "image": "https://images.unsplash.com/photo-1562962230-16e4623d36e6?q=80&w=800&auto=format&fit=crop",
+      "tag": "Traditional"
+    }
+  ]
+}

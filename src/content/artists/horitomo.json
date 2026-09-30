@@ -1,0 +1,27 @@
+{
+  "name": "Horitomo (Kazuaki Kitamura)",
+  "handle": "@horitomo_stateofgrace",
+  "headline": "Master of Traditional Japanese Irezumi & Creator of Monmon Cats",
+  "city": "San Jose",
+  "country": "United States",
+  "studio": "State of Grace Tattoo",
+  "styles": ["Irezumi", "Traditional Japanese", "Tebori", "Folklore"],
+  "badge": "GOAT Hall of Fame",
+  "bio": "Kazuaki Kitamura (Horitomo) is a globally acclaimed practitioner of traditional Japanese tattooing with over three decades of immersion in Tebori (hand-carving) and machine work. An alumnus of Tokyo and Yokohama studios, Horitomo is celebrated both for reverent, historically rigorous bodysuits and for creating 'Monmon Cats'—a worldwide art phenomenon honoring cat folklore draped in classic Horimono motifs.",
+  "instagram": "https://instagram.com/horitomo_stateofgrace",
+  "bookingUrl": "https://stateofgracetattoo.com",
+  "bookingStatus": "Waitlist",
+  "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop",
+  "coverImage": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=1400&auto=format&fit=crop",
+  "experienceYears": 32,
+  "awards": ["Author of Immovable: Fudo Myo-o", "Author of Monmon Cats Vol 1 & 2", "Asian Art Museum Exhibitor"],
+  "featured": true,
+  "rank": 6,
+  "signatureWork": [
+    {
+      "title": "Full Horimono Backpiece: Fudo Myo-o and Waterfall",
+      "image": "https://images.unsplash.com/photo-1590246814883-57835154378f?q=80&w=800&auto=format&fit=crop",
+      "tag": "Bodysuit"
+    }
+  ]
+}

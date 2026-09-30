@@ -1,0 +1,32 @@
+{
+  "name": "Dmitriy Samohin",
+  "handle": "@dmitriysamohin",
+  "headline": "The World Benchmark for Hyper-Realistic Color & Historical Portraits",
+  "city": "Odessa",
+  "country": "Ukraine",
+  "studio": "Dmitriy Samohin Private Studio",
+  "styles": ["Color Realism", "Portraiture", "Photorealism", "Black & Grey"],
+  "badge": "GOAT Hall of Fame",
+  "bio": "Universally revered among tattooers as one of the most technically gifted realism artists to ever pick up a machine. Based in Odessa, Ukraine, Dmitriy Samohin achieves color blending, dermal depth, and texture rendering that rivals master Renaissance oil canvases. From wildlife to historical portraits, his pieces are regarded as global benchmarks.",
+  "instagram": "https://instagram.com/dmitriysamohin",
+  "bookingUrl": "https://instagram.com/dmitriysamohin",
+  "bookingStatus": "Books Closed",
+  "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop",
+  "coverImage": "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?q=80&w=1400&auto=format&fit=crop",
+  "experienceYears": 24,
+  "awards": ["Best of Show Worldwide (Over 50+ International Conventions)", "Golden Needle Icon of Realism"],
+  "featured": true,
+  "rank": 4,
+  "signatureWork": [
+    {
+      "title": "Hyper-Realistic Native American Elder Portrait",
+      "image": "https://images.unsplash.com/photo-1562962230-16e4623d36e6?q=80&w=800&auto=format&fit=crop",
+      "tag": "Color Realism"
+    },
+    {
+      "title": "Kinetic Wild Predator Wildlife Sleeve",
+      "image": "https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=800&auto=format&fit=crop",
+      "tag": "Full Sleeve"
+    }
+  ]
+}

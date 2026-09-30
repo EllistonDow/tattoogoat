@@ -1,0 +1,27 @@
+{
+  "name": "Carlos Torres",
+  "handle": "@carlostorrestattoo",
+  "headline": "Fine Art Oil Painter & Chiaroscuro Black and Grey Virtuoso",
+  "city": "San Pedro",
+  "country": "United States",
+  "studio": "Timeline Gallery",
+  "styles": ["Black & Grey", "Fine Art Realism", "Chiaroscuro", "Surrealism"],
+  "badge": "GOAT Hall of Fame",
+  "bio": "Carlos Torres blends traditional fine art oil painting techniques with skin illustration. Based in Southern California at Timeline Gallery, Torres is internationally acclaimed for his dramatic chiaroscuro lighting, emotional human portraits, and ethereal surrealism. He regularly hosts fine art seminars for master tattooists seeking to elevate their understanding of anatomy, lighting, and value control.",
+  "instagram": "https://instagram.com/carlostorrestattoo",
+  "bookingUrl": "https://carlostorresart.com",
+  "bookingStatus": "Waitlist",
+  "avatar": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=600&auto=format&fit=crop",
+  "coverImage": "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?q=80&w=1400&auto=format&fit=crop",
+  "experienceYears": 26,
+  "awards": ["Best Black & Grey in the World (London Tattoo Convention)", "Permanent Exhibitor at Copro Gallery"],
+  "featured": false,
+  "rank": 8,
+  "signatureWork": [
+    {
+      "title": "Classical Oil-Style Chiaroscuro Rib & Torso Composition",
+      "image": "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?q=80&w=800&auto=format&fit=crop",
+      "tag": "Fine Art"
+    }
+  ]
+}

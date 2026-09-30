@@ -1,0 +1,27 @@
+{
+  "name": "Thomas Hooper",
+  "handle": "@thomas_hooper",
+  "headline": "High Priest of Sacred Geometry, Intricate Stippling & Esoteric Patterns",
+  "city": "Austin",
+  "country": "United States",
+  "studio": "Rock of Ages Tattoo",
+  "styles": ["Geometric", "Sacred Geometry", "Blackwork", "Dotwork"],
+  "badge": "GOAT Hall of Fame",
+  "bio": "Hailing from Hastings, England and now based at Austin's renowned Rock of Ages Tattoo, Thomas Hooper is the definitive pioneer of sacred geometry, fractal repetition, and ceremonial stipple dotwork on human skin. Drawing philosophical influence from cosmology, Eastern mandalas, and natural mathematics, Hooper's full bodysuits and headpieces are celebrated worldwide as transcendent wearable architecture.",
+  "instagram": "https://instagram.com/thomas_hooper",
+  "bookingUrl": "https://meditationsintemplecave.com",
+  "bookingStatus": "Waitlist",
+  "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop",
+  "coverImage": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=1400&auto=format&fit=crop",
+  "experienceYears": 25,
+  "awards": ["Author of Inward: The Art of Thomas Hooper", "Master of Complex Mandalas"],
+  "featured": false,
+  "rank": 10,
+  "signatureWork": [
+    {
+      "title": "Sacred Mandala Backpiece & Cranium Stippling",
+      "image": "https://images.unsplash.com/photo-1590246814883-57835154378f?q=80&w=800&auto=format&fit=crop",
+      "tag": "Sacred Geometry"
+    }
+  ]
+}

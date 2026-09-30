@@ -1,0 +1,27 @@
+{
+  "name": "Guy Aitchison",
+  "handle": "@guyaitchisonart",
+  "headline": "Visionary Father of Biomechanical Tattooing & Dimensional Color Theory",
+  "city": "Chicago",
+  "country": "United States",
+  "studio": "Hyperspace Studios",
+  "styles": ["Biomechanical", "Color Realism", "Organic", "Psychedelic"],
+  "badge": "Pioneer",
+  "bio": "Guy Aitchison forever changed tattoo history by introducing architectural sculpture, dynamic light reflection, and industrial biomechanics to the human body. As the author of 'Reinventing the Tattoo'—the definitive educational canon studied by thousands of professional tattooers worldwide—Aitchison transformed how skin artists approach contrast, depth, and three-dimensional rendering.",
+  "instagram": "https://instagram.com/guyaitchisonart",
+  "bookingUrl": "https://hyperspacestudios.com",
+  "bookingStatus": "Waitlist",
+  "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop",
+  "coverImage": "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?q=80&w=1400&auto=format&fit=crop",
+  "experienceYears": 36,
+  "awards": ["Author of Reinventing the Tattoo", "Pioneer of Digital 3D Sculpting for Body Art"],
+  "featured": true,
+  "rank": 5,
+  "signatureWork": [
+    {
+      "title": "Hyper-Dimensional Biomechanical Shoulder & Arm Armor",
+      "image": "https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?q=80&w=800&auto=format&fit=crop",
+      "tag": "Biomechanical"
+    }
+  ]
+}

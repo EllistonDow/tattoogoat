@@ -1,0 +1,27 @@
+{
+  "name": "Jack Rudy",
+  "handle": "@mrgentlemanjack",
+  "headline": "Living Patriarch of Single-Needle Fine Line & California Black & Grey",
+  "city": "Los Angeles",
+  "country": "United States",
+  "studio": "Good Time Charlie's Tattooland",
+  "styles": ["Fine Line", "Black & Grey", "Chicano Art", "Single Needle"],
+  "badge": "Living Legend",
+  "bio": "Jack Rudy is an architect of modern tattooing. Alongside Charlie Cartwright at Good Time Charlie's Tattooland in East Los Angeles in the 1970s, Rudy revolutionized the craft by modifying rotary and coil machines to operate single needles smoothly into skin. This gave birth to the global fine-line black-and-grey movement that defines West Coast street culture and high-fashion micro-tattooing today.",
+  "instagram": "https://instagram.com/mrgentlemanjack",
+  "bookingUrl": "https://tattooland.com",
+  "bookingStatus": "Waitlist",
+  "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=600&auto=format&fit=crop",
+  "coverImage": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1400&auto=format&fit=crop",
+  "experienceYears": 48,
+  "awards": ["Tattoo Hall of Fame Lifetime Achievement Pioneer", "President of the Beatniks Car Club"],
+  "featured": true,
+  "rank": 2,
+  "signatureWork": [
+    {
+      "title": "Classic East LA Fine-Line Lowrider Portrait",
+      "image": "https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?q=80&w=800&auto=format&fit=crop",
+      "tag": "Single Needle"
+    }
+  ]
+}

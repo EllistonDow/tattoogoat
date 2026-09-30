@@ -1,0 +1,27 @@
+{
+  "name": "Freddy Negrete",
+  "handle": "@freddy_negrete",
+  "headline": "The Godfather of Prison-Style Black & Grey Chicano Art",
+  "city": "Los Angeles",
+  "country": "United States",
+  "studio": "Shamrock Social Club (Sunset Strip)",
+  "styles": ["Black & Grey", "Chicano Art", "Fine Line", "Lettering"],
+  "badge": "Pioneer",
+  "bio": "Freddy Negrete is credited with bringing prison-style single-needle black & grey tattooing out of juvenile detention centers and into legitimate storefronts. Working with Ed Hardy and Jack Rudy, Negrete legitimized fine line shading and Chicano cultural imagery worldwide. He served as the primary technical tattoo consultant on Hollywood films including 'Blood In, Blood Out'.",
+  "instagram": "https://instagram.com/freddy_negrete",
+  "bookingUrl": "https://shamrocksocialclub.com",
+  "bookingStatus": "Open",
+  "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop",
+  "coverImage": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=1400&auto=format&fit=crop",
+  "experienceYears": 46,
+  "awards": ["Author of Smile Now, Cry Later", "Lifetime Pioneer Award at National Tattoo Association"],
+  "featured": false,
+  "rank": 7,
+  "signatureWork": [
+    {
+      "title": "Virgen de Guadalupe Chicano Fine Line Shading",
+      "image": "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?q=80&w=800&auto=format&fit=crop",
+      "tag": "Black & Grey"
+    }
+  ]
+}

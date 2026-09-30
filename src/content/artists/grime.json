@@ -1,0 +1,27 @@
+{
+  "name": "Grime",
+  "handle": "@the_grime",
+  "headline": "Visionary Master of Explosive Neo-Japanese Form & Kinetic Bodysuits",
+  "city": "San Francisco",
+  "country": "United States",
+  "studio": "Skull & Sword",
+  "styles": ["Neo-Traditional", "Irezumi", "Freehand", "Color Flow"],
+  "badge": "GOAT Hall of Fame",
+  "bio": "Grime is one of the most revered and uncompromising artists in the global tattoo pantheon. Founder of San Francisco's iconic Skull & Sword, Grime redefined how large-scale tattoos hug the musculature of the human frame. Fusing traditional Japanese dragon and warrior mythology with raw skate-art kinetics and razor-sharp color saturation, his full bodysuits have inspired an entire generation of modern tattooers.",
+  "instagram": "https://instagram.com/the_grime",
+  "bookingUrl": "https://theskullandsword.com",
+  "bookingStatus": "Books Closed",
+  "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop",
+  "coverImage": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=1400&auto=format&fit=crop",
+  "experienceYears": 28,
+  "awards": ["Author of Iron Verity", "Grandmaster of Freehand Dermal Flow"],
+  "featured": false,
+  "rank": 11,
+  "signatureWork": [
+    {
+      "title": "Full Bodysuit: Kinetic Dragon and Warrior Currents",
+      "image": "https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?q=80&w=800&auto=format&fit=crop",
+      "tag": "Bodysuit"
+    }
+  ]
+}
